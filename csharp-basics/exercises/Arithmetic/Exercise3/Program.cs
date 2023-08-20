@@ -1,4 +1,4 @@
-﻿namespace SumAverageRunningInt
+﻿namespace NumberRangeCalculator
 {
     class Program
     {

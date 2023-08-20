@@ -1,4 +1,6 @@
-﻿namespace CalculateArea
+﻿using System;
+
+namespace NumberGuessingGame
 {
     class Program
     {

@@ -1,4 +1,4 @@
-﻿namespace CheckOddEven
+﻿namespace OddOrEven
 {
     internal class Program
     {
@@ -7,11 +7,10 @@
             Console.WriteLine("Input number:");
             int number = int.Parse(Console.ReadLine());
 
-            if (isOdd(number)) 
+            if (IsOdd(number)) 
             {
                 Console.WriteLine("Odd number");
             }
-
             else
             {
                 Console.WriteLine("Even number");
@@ -21,10 +20,9 @@
 
         }
 
-        static bool isOdd(int number)
+        static bool IsOdd(int number)
         {
             return number % 2 != 0;
         }
-
     }
 }
