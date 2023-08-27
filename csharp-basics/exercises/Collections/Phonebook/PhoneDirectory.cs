@@ -45,21 +45,18 @@ namespace PhoneBook
             }
 
             var i = Find(name);
-            if (i >= 0) 
+            if (i >= 0)
             {
                 _data[i].number = number;
             }
-            else 
+            else
             {
-                if (_dataCount == _data.Length) 
+                if (_dataCount == _data.Length)
                 {
                     Array.Resize(ref _data, (2 * _data.Length));
                 }
 
-                var newEntry = new PhoneEntry {name = name, number = number}; // Create a new pair.
+                var newEntry = new PhoneEntry { name = name, number = number }; // Create a new pair.
                 _data[_dataCount] = newEntry;   // Add the new pair to the array.
                 _dataCount++;
             }
-        }
-    }
-}
