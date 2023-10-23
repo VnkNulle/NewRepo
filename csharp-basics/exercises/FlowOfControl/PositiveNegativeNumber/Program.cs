@@ -1,28 +1,27 @@
-﻿using System;
-
-namespace PositiveNegativeNumber
+﻿namespace PositiveNegativeNumber
 {
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Enter the number.");
-            var input = Console.ReadKey();
-            /*
-            fixme
-            if (?)
+            var input = Console.ReadLine();
+
+            int number = int.Parse(input);
+
+            if (number > 0)
             {
                 Console.WriteLine("Number is positive");
-            } 
-            else if (?) 
+            }
+            else if (number < 0)
             {
                 Console.WriteLine("Number is negative");
-            } 
-            else 
+            }
+            else
             {
                 Console.WriteLine("Number is zero");
             }
-            */
+
         }
     }
 }
