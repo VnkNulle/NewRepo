@@ -4,27 +4,27 @@ namespace Exercise5
 {
     class Program
     {
-        //TODO: Write a C# program to find the index of an array element.
+        private static int FindIndex(int[] array, int element)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == element)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         private static void Main(string[] args)
         {
             int[] myArray = { 25, 14, 56, 15, 36, 56, 77, 18, 29, 49 };
 
-            var indexOfElement36 = -1;
-            var indexOfElement29 = -1;
+            var indexElement1 = FindIndex(myArray, 36);
+            var indexElement2 = FindIndex(myArray, 29);
 
-            /*
-            fixme
-            for (?) {
-                
-            }
-            */
-            Console.WriteLine("Index position of 36 is: " + indexOfElement36);
-            Console.WriteLine("Index position of 29 is: " + indexOfElement29);
-
-            //Expected output:
-            //Index position of 36 is: 4
-            //Index position of 29 is: 8
-
+            Console.WriteLine("Index position of 36 is: " + indexElement1);
+            Console.WriteLine("Index position of 29 is: " + indexElement2);
         }
     }
 }
