@@ -2,62 +2,27 @@
 
 namespace VideoStore
 {
-
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            while (true)
-            {
-                Console.WriteLine("Choose the operation you want to perform ");
-                Console.WriteLine("Choose 0 for EXIT");
-                Console.WriteLine("Choose 1 to fill video store");
-                Console.WriteLine("Choose 2 to rent video (as user)");
-                Console.WriteLine("Choose 3 to return video (as user)");
-                Console.WriteLine("Choose 4 to list inventory");
+            VideoStore store = new VideoStore();
 
-                int n = Convert.ToByte(Console.ReadLine());
+            store.AddVideo("The Matrix");
+            store.AddVideo("Godfather II");
+            store.AddVideo("Star Wars Episode IV: A New Hope");
 
-                switch (n)
-                {
-                    case 0:
-                        return;
-                    case 1:
-                        FillVideoStore();
-                        break;
-                    case 2:
-                        RentVideo();
-                        break;
-                    case 3:
-                        ReturnVideo();
-                        break;
-                    case 4:
-                        ListInventory();
-                        break;
-                    default:
-                        return;
-                }
-            }
-        }
+            store.RateVideo("The Matrix", 4);
+            store.RateVideo("The Matrix", 5);
+            store.RateVideo("Godfather II", 5);
+            store.RateVideo("Godfather II", 4);
+            store.RateVideo("Star Wars Episode IV: A New Hope", 5);
 
-        private static void ListInventory()
-        {
+            store.RentVideo("The Matrix");
+            store.RentVideo("Godfather II");
+            store.RentVideo("Star Wars Episode IV: A New Hope");
 
-        }
-
-        private static void FillVideoStore()
-        {
-
-        }
-
-        private static void RentVideo()
-        {
-
-        }
-
-        private static void ReturnVideo()
-        {
-
+            store.ListInventory();
         }
     }
 }
